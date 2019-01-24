@@ -25,12 +25,12 @@ def FrankeFunction(x,y):
 
 
 n = 100 # 1st way = data points
-n_x = 100 # 2nd way = data points
-n_y = 100 # 2nd way = data points
+#n_x = 100 # 2nd way = data points
+#n_y = 100 # 2nd way = data points
 
 
 
-error = 0.1
+error = 0.001
 
 #x = np.random.rand(n,1) # 1st way x data values
 #y = np.random.rand(n,1) # 1st way x data values
@@ -38,9 +38,9 @@ error = 0.1
 
 nfit=100
 # Make data.
-xplot = np.arange(0, 1, 0.05) # 1st way grid
-yplot = np.arange(0, 1, 0.05) # 1st way grid
-xplot, yplot = np.meshgrid(xplot,yplot)
+#xplot = np.arange(0, 1, 0.05) # 1st way grid
+#yplot = np.arange(0, 1, 0.05) # 1st way grid
+#xplot, yplot = np.meshgrid(xplot,yplot)
 
 #sort_inds_xplot = np.argsort(x) # 2nd way for grid points 
 #sort_inds_yplot = np.argsort(y) # 2nd way for grid points
@@ -52,8 +52,8 @@ xplot, yplot = np.meshgrid(xplot,yplot)
 
 #x = np.random.rand(n_x) #2nd way x data values
 XY = []
-for x in np.random.rand(n_x):
-    for y in np.random.randn(n_y): #2nd way y data values
+for x in np.random.rand(n):
+    for y in np.random.randn(n): #2nd way y data values
         XY.append([1, x, y, x*x, x*y, y*y])
 XY = np.asarray(XY)
 
@@ -73,20 +73,27 @@ clf2.fit(XY, z)
 #ols = linear_model.LinearRegression()
 #ols.fit(X_train, y_train)
 
+XYplot = []
+for xplot in np.linspace(0,1,10):
+    for yplot in np.linspace(0,1,10): #2nd way y data values
+        XYplot.append([1, xplot, yplot, xplot*xplot, xplot*yplot, yplot*yplot])
+XYplot = np.asarray(XYplot)
+
+xplot, yplot = XYplot[:, [1,2]].T
 
 zplot=FrankeFunction(xplot, yplot) # 1st way ztrue
 
-XYplot = np.c_[np.ones(((n_x*n_y),1)), xplot, xplot**2] # 1st way XYplot
+#XYplot = np.c_[np.ones(((n_x*n_y),1)), xplot, xplot**2] # 1st way XYplot
 
 zsklearn = clf2.predict(XYplot) # 1st way zresult
 
 
-
 fig = plt.figure()
 ax = fig.gca(projection='3d')
+print(xplot)
 
 # Plot the surface.
-surf = ax.plot_surface(xplot, yplot, zsklearn, cmap=cm.coolwarm,
+surf = ax.plot_surface(xplot.reshape(10,10), yplot.reshape(10,10), zsklearn.reshape(10,10), cmap=cm.coolwarm,
                        linewidth=0, antialiased=False)
 
 #surf = ax.plot_surface(xplot, yplot, zplot, cmap=cm.coolwarm,
