@@ -24,7 +24,7 @@ xtrain=np.random.rand(100,1)
 ytrain=np.random.rand(100,1)
 xtrain, ytrain = np.meshgrid(xtrain,ytrain)
 xtrain, ytrain = xtrain.reshape(-1,1), ytrain.reshape(-1,1)
-ztrain = FrankeFunction(xtrain, ytrain) + 0.1*np.random.randn(len(xtrain), 1)
+Ztrain = FrankeFunction(xtrain, ytrain) + 0.1*np.random.randn(len(xtrain), 1)
 
 #degree 3
 poly = PolynomialFeatures(degree=3)
@@ -38,8 +38,8 @@ xnew, ynew = np.meshgrid(xnew,ynew)
 #ravel - makes correspondance between xnew and ynew (otherwise they're not connected)
 #matrix with 2 columns and 100 rows matching two coordinate points (unravelment)
 #concatenation tranposes and merges
-Znew = poly.fit_transform(np.c_[xnew.ravel(), ynew.ravel()])
-Zpredict = linreg.predict(Znew)
+Xnew = poly.fit_transform(np.c_[xnew.ravel(), ynew.ravel()])
+Zpredict = linreg.predict(Xnew)
 Ztrue = FrankeFunction(xnew, ynew).reshape(-1, 1)
 
 #Zpredict plot
@@ -87,8 +87,8 @@ xnew, ynew = np.meshgrid(xnew,ynew)
 #ravel - makes correspondance between xnew and ynew (otherwise they're not connected)
 #matrix with 2 columns and 100 rows matching two coordinate points (unravelment)
 #concatenation tranposes and merges
-Znew = poly.fit_transform(np.c_[xnew.ravel(), ynew.ravel()])
-Zpredict = linreg.predict(Znew)
+Xnew = poly.fit_transform(np.c_[xnew.ravel(), ynew.ravel()])
+Zpredict = linreg.predict(Xnew)
 #Zpredict plot
 fig = plt.figure()
 ax = fig.gca(projection='3d')
