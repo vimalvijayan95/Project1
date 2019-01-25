@@ -22,9 +22,7 @@ def FrankeFunction(x,y):
 #uniform distribution creation (100 rows,1 column), numbers in [0,1]
 xtrain=np.random.rand(100,1)
 ytrain=np.random.rand(100,1)
-xtrain, ytrain = np.meshgrid(xtrain,ytrain)
-xtrain, ytrain = xtrain.reshape(-1,1), ytrain.reshape(-1,1)
-Ztrain = FrankeFunction(xtrain, ytrain) + 0.1*np.random.randn(len(xtrain), 1)
+ztrain = FrankeFunction(xtrain, ytrain) + 0.1*np.random.randn(len(xtrain), 1)
 
 #degree 3
 poly = PolynomialFeatures(degree=3)
@@ -38,15 +36,14 @@ xnew, ynew = np.meshgrid(xnew,ynew)
 #ravel - makes correspondance between xnew and ynew (otherwise they're not connected)
 #matrix with 2 columns and 100 rows matching two coordinate points (unravelment)
 #concatenation tranposes and merges
-Xnew = poly.fit_transform(np.c_[xnew.ravel(), ynew.ravel()])
-Zpredict = linreg.predict(Xnew)
+Znew = poly.fit_transform(np.c_[xnew.ravel(), ynew.ravel()])
+Zpredict = linreg.predict(Znew)
 Ztrue = FrankeFunction(xnew, ynew).reshape(-1, 1)
 
-#Zpredict plot
+#Ztrue plot
 fig = plt.figure()
 ax = fig.gca(projection='3d')
 # Plot the surface.
-print('Polynomial fit plot (prediction)')
 surf = ax.plot_surface(xnew, ynew, Ztrue.reshape(*xnew.shape), cmap=cm.coolwarm,
                       linewidth=0, antialiased=False)
 
@@ -57,19 +54,25 @@ ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
 
 # Add a color bar which maps values to colors.
 fig.colorbar(surf, shrink=0.5, aspect=5)
-
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Zpredict')
+ax.set_title('Franke function (training)')
 plt.show()
 
-#Ztrue plot
+#Zpredict plot
 
 fig = plt.figure()
 ax = fig.gca(projection='3d')
-print('Franke function plot')
 surf = ax.plot_surface(xnew, ynew, Zpredict.reshape(*xnew.shape), cmap=cm.coolwarm, linewidth=0, antialiased=False)
 ax.set_zlim(-0.4, 1.40)
 ax.zaxis.set_major_locator(LinearLocator(10))
 ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
 fig.colorbar(surf, shrink=0.5, aspect=5)
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Zpredict')
+ax.set_title('Polynomial (deg 3) fit (prediction)')
 plt.show()
 
 print("MSE for Zpredict_degree3:", mean_squared_error(Ztrue,Zpredict))
@@ -87,13 +90,12 @@ xnew, ynew = np.meshgrid(xnew,ynew)
 #ravel - makes correspondance between xnew and ynew (otherwise they're not connected)
 #matrix with 2 columns and 100 rows matching two coordinate points (unravelment)
 #concatenation tranposes and merges
-Xnew = poly.fit_transform(np.c_[xnew.ravel(), ynew.ravel()])
-Zpredict = linreg.predict(Xnew)
+Znew = poly.fit_transform(np.c_[xnew.ravel(), ynew.ravel()])
+Zpredict = linreg.predict(Znew)
 #Zpredict plot
 fig = plt.figure()
 ax = fig.gca(projection='3d')
 # Plot the surface.
-print('Polynomial fit plot (prediction)')
 surf = ax.plot_surface(xnew, ynew, Ztrue.reshape(*xnew.shape), cmap=cm.coolwarm,
                       linewidth=0, antialiased=False)
 
@@ -104,7 +106,10 @@ ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
 
 # Add a color bar which maps values to colors.
 fig.colorbar(surf, shrink=0.5, aspect=5)
-
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Zpredict')
+ax.set_title('Polynomial (deg 4) fit (prediction)')
 plt.show()
 print("MSE for Zpredict_degree4:", mean_squared_error(Ztrue,Zpredict))
 print("R2score for Zpredict_degree4:", r2_score(Ztrue,Zpredict))
@@ -127,7 +132,6 @@ Zpredict = linreg.predict(Znew)
 fig = plt.figure()
 ax = fig.gca(projection='3d')
 # Plot the surface.
-print('Polynomial fit plot (prediction)')
 surf = ax.plot_surface(xnew, ynew, Ztrue.reshape(*xnew.shape), cmap=cm.coolwarm,
                       linewidth=0, antialiased=False)
 
@@ -138,7 +142,10 @@ ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
 
 # Add a color bar which maps values to colors.
 fig.colorbar(surf, shrink=0.5, aspect=5)
-
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Zpredict')
+ax.set_title('Polynomial (deg 5) fit (prediction)')
 plt.show()
 print("MSE for Zpredict_degree5:", mean_squared_error(Ztrue,Zpredict))
 print("R2score for Zpredict_degree5:", r2_score(Ztrue,Zpredict))
