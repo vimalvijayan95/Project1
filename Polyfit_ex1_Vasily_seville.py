@@ -20,7 +20,7 @@ def FrankeFunction(x,y):
     return term1 + term2 + term3 + term4
 
 
-def polyfit(xtrain, ytrain, ztrain, X_c, f, sigma_squared):
+def polyfit(xtrain, ytrain, ztrain, X_c, f):
     #sigma is changed when we apply noise
     #resampling - we get betas variance
     #по всем степеням мира
@@ -222,7 +222,7 @@ for d in range (3,6):
         ztrain = FrankeFunction(xtrain, ytrain) + (10**(-f))*noise
         if f == 1:
             print("\nOrdinary Least Squares:")
-            polyfit(xtrain,ytrain,ztrain,X_c,f,sigma_squared)
+            polyfit(xtrain,ytrain,ztrain,X_c,f)
             print("\nOrdinary Least Squares with %s-fold Cross-Validation:" %str(k))
             LinregResample(k, X_c, xtrain, ytrain, ztrain)  
             
