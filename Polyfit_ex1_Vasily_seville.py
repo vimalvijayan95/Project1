@@ -23,7 +23,7 @@ def FrankeFunction(x,y):
 def polyfit(xtrain, ytrain, ztrain, X_c, f):
     #sigma is changed when we apply noise
     #resampling - we get betas variance
-    #по всем степеням мира
+    
     Xtrain = poly.fit_transform(X_c)
     linreg.fit(Xtrain,ztrain)
     Zpredict = linreg.predict(Xtrain)
@@ -39,9 +39,9 @@ def polyfit(xtrain, ytrain, ztrain, X_c, f):
     feature_names = poly.get_feature_names()
     lin_coef = linreg.coef_.tolist()
 
-    str1 = [str(i) for i in feature_names]
-    str2 = [str(i) for i in lin_coef[0]]
-    str3 = [str(i) for i in conf_int]
+    str1 = [str(a) for a in feature_names]
+    str2 = [str(a) for a in lin_coef[0]]
+    str3 = [str(a) for a in conf_int]
     Beta_var_degrees = np.stack((str1,str2,str3),axis=-1)
     
     print("\nFeatures/Betas/Conf.intervals:\n", Beta_var_degrees)
@@ -114,7 +114,7 @@ def LinregResample(k, X_c, xtrain, ytrain, ztrain):
 def RidgeResample(k, lambdas, X_c, xtrain, ytrain, ztrain):
     kfold = KFold(n_splits = k)
     # Perform the cross-validation to estimate MSE
-    #деление на сеты происходит 5 раз
+    #division 5 times
     #sing val decompos??
     nlambdas = len(lambdas)
     mse_KFold = np.zeros((nlambdas, k))
@@ -156,7 +156,6 @@ def RidgeResample(k, lambdas, X_c, xtrain, ytrain, ztrain):
 def LassoResample(k, lambdas, X_c, xtrain, ytrain, ztrain):
     kfold = KFold(n_splits = k)
     # Perform the cross-validation to estimate MSE
-    #деление на сеты происходит 5 раз
     #sing val decompos??
     nlambdas = len(lambdas)
     mse_KFold = np.zeros((nlambdas, k))
@@ -208,7 +207,7 @@ k = 5
 ##b) Ridge + cross-validation
 lambdas = [1e-4, 1e-3, 1e-2, 1e-1, 10]
 
-#для графиков
+#for plotting
 xnew = np.arange(0, 1, 0.1)
 ynew = np.arange(0, 1, 0.1)
 xnew, ynew = np.meshgrid(xnew,ynew)
@@ -229,7 +228,7 @@ for d in range (3,6):
             #ravel - makes correspondance between xnew and ynew (otherwise they're not connected)
             #matrix with 2 columns and 100 rows matching two coordinate points (unravelment)
             #concatenation tranposes and merges
-            #пробегая каждое значения икса, фиксируем игрек
+            #fixing y at every X value
             Xnew = poly.fit_transform(np.c_[xnew.ravel(), ynew.ravel()])
             zpredict = linreg.predict(Xnew)
             
