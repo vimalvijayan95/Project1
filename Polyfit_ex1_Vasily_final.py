@@ -162,7 +162,7 @@ X_c = np.c_[xtrain, ytrain]
 noise = np.random.randn(len(xtrain), 1)
 
 k = 5
-lambdas = [1e-3, 1e-2, 1e-1, 10]
+lambdas = [1e-5, 1e-3, 1e-1, 10]
 
 linreg = LinearRegression()
 kfold = KFold(n_splits=k)
@@ -174,11 +174,10 @@ xnew, ynew = np.meshgrid(xnew, ynew)
 ztrue = franke_function(xnew, ynew)
 
 for d in range(3, 6):
-    print("\nDegree:%s" % str(d))
     poly = PolynomialFeatures(degree=d)
-    for f in range(0, 4):
+    for f in range(0, 3):
         ztrain = franke_function(xtrain, ytrain) + (10 ** (-f)) * noise
-        print("\nsigma(noise) = %s" % str(float(10 ** (-f))))
+        print("\nDegree:%s ,sigma(noise) = %s" % (str(d),str(float(10 ** (-f)))))
         if f == 0 or f == 1:
             print("\nOrdinary Least Squares:")
             poly_fit(xtrain, ytrain, ztrain, X_c, f)
