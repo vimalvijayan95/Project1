@@ -100,7 +100,7 @@ def linreg_resample(X_c, xtrain, ytrain, ztrain):
         Xtest_fit = poly.fit_transform(xtest_cv)
         zpred = linreg.predict(Xtest_fit)
 
-        mse_KFold[j] = np.sum((zpred - ztest_cv) ** 2) / np.size(zpred)
+        mse_KFold[j] = mean_squared_error(ztest_cv, zpred)
         R2_KFold[j] = r2_score(ztest_cv, zpred)
 
         j += 1
@@ -137,7 +137,7 @@ def model_resample(k, lambdas, X_c, xtrain, ytrain, ztrain, model):
             Xtest_fit = poly.fit_transform(xtest_cv)[:, 1:]
             zpred = model_type.predict(Xtest_fit)
 
-            mse_KFold[l, j] = np.sum((zpred - ztest_cv) ** 2) / np.size(zpred)
+            mse_KFold[l, j] = mean_squared_error(ztest_cv, zpred)
             R2_KFold[l, j] = r2_score(ztest_cv, zpred)
 
             j += 1
