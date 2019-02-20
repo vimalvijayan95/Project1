@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 from matplotlib import cm
+from mpl_toolkits.mplot3d import Axes3D
 from sklearn.model_selection import KFold
 from matplotlib.ticker import LinearLocator, FormatStrFormatter
 import numpy as np
@@ -150,7 +151,7 @@ def model_resample(k, lambdas, X_c, xtrain, ytrain, ztrain, model):
         )
         l += 1
 
-    best_mse = np.argmin(estimated_mse_KFold)
+    best_mse = np.argmax(estimated_R2_KFold)
     best_lambda = lambdas[best_mse]
     print("\nBest lambda (%s):%s\n" % (str(model.__name__), str(best_lambda)))
 
