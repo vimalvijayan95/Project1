@@ -4,46 +4,46 @@ Degree:3 ,sigma(noise) = 1.0
 Ordinary Least Squares:
 
 Features/Betas/Conf.intervals:
- [['1' '0.7433159055236895' '0.08660862689450499']
- ['x0' '-1.773516315718193' '0.4450161263855693']
- ['x1' '2.3275021655133314' '0.4326425193584908']
- ['x0^2' '2.8388038662741115' '0.8471648178134167']
- ['x0 x1' '-0.5416168460381938' '0.6942843616554489']
- ['x1^2' '-3.938930639653592' '0.8648371922975713']
- ['x0^3' '-2.3605328791064006' '0.5437205186624353']
- ['x0^2 x1' '1.9874706889601017' '0.47290750297040574']
- ['x0 x1^2' '-0.44120427276128443' '0.47633800604490345']
- ['x1^3' '0.8910880086718479' '0.5528661342878588']]
+ [['1' '0.3756852738683314' '0.07412145661614249']
+ ['x0' '4.429174875698224' '0.3811699815788066']
+ ['x1' '2.649043039568771' '0.4292117160887752']
+ ['x0^2' '-6.372324942401285' '0.8213850283345291']
+ ['x0 x1' '-8.840163432756109' '0.6694256582949395']
+ ['x1^2' '-6.14977799248452' '0.8519566171306792']
+ ['x0^3' '2.224482205150425' '0.5449976988482046']
+ ['x0^2 x1' '5.8349192553734985' '0.4740337871243716']
+ ['x0 x1^2' '4.352894061234704' '0.44946924645459857']
+ ['x1^3' '2.736994333857656' '0.5403037614171953']]
 
-MSE for Zpredict (without resampling): 0.8193557942251256
-R2_score for Zpredict (without resampling): 0.11139995747218157
+MSE for Zpredict (without resampling): 0.8758225050725639
+R2_score for Zpredict (without resampling): 0.16995832290841462
 
 Ordinary Least Squares with 5-fold Cross-Validation:
 
-MSE for Zpredict= 0.9381189153150205 
-R2_score for Zpredict= -0.020943980766522152
+MSE for Zpredict= 0.9863111485263122 
+R2_score for Zpredict= 0.04622242181898817
 
 Ridge regression with 5-fold Cross-Validation, sigma(noise) = 1.0:
 
 Lamda:1e-05
 
-MSE for Zpredict (Ridge) = 0.9380865948501846 
-R2 score for Zpredict (Ridge) = -0.020907581262106522
+MSE for Zpredict (Ridge) = 0.9862963059331081 
+R2 score for Zpredict (Ridge) = 0.04623884831074139
 
 Lamda:0.001
 
-MSE for Zpredict (Ridge) = 0.9351388098345493 
-R2 score for Zpredict (Ridge) = -0.01758898443493282
+MSE for Zpredict (Ridge) = 0.9849886391835853 
+R2 score for Zpredict (Ridge) = 0.0476954418766186
 
 Lamda:0.1
 
-MSE for Zpredict (Ridge) = 0.8971862151361961 
-R2 score for Zpredict (Ridge) = 0.024100702156411448
+MSE for Zpredict (Ridge) = 0.9749606228078183 
+R2 score for Zpredict (Ridge) = 0.059545826213979615
 
 Lamda:10
 
-MSE for Zpredict (Ridge) = 0.8813516487087523 
-R2 score for Zpredict (Ridge) = 0.031393961863028605
+MSE for Zpredict (Ridge) = 0.9671815103350514 
+R2 score for Zpredict (Ridge) = 0.0658176374593848
 
 Best lambda (Ridge):10
 
@@ -52,23 +52,23 @@ Lasso regression with 5-fold Cross-Validation, sigma(noise) = 1.0:
 
 Lamda:1e-05
 
-MSE for Zpredict (Lasso) = 42.259048915018965 
-R2 score for Zpredict (Lasso) = -0.017128970546320253
+MSE for Zpredict (Lasso) = 0.9887990125847915 
+R2 score for Zpredict (Lasso) = 0.04348913547081672
 
 Lamda:0.001
 
-MSE for Zpredict (Lasso) = 41.23005913928228 
-R2 score for Zpredict (Lasso) = 0.024119041638670003
+MSE for Zpredict (Lasso) = 0.9773954087864076 
+R2 score for Zpredict (Lasso) = 0.057268100314304536
 
 Lamda:0.1
 
-MSE for Zpredict (Lasso) = 37.19299023827158 
-R2 score for Zpredict (Lasso) = -0.023404266434725995
+MSE for Zpredict (Lasso) = 1.0508350877003696 
+R2 score for Zpredict (Lasso) = -0.014805020228933397
 
 Lamda:10
 
-MSE for Zpredict (Lasso) = 37.19299023827158 
-R2 score for Zpredict (Lasso) = -0.023404266434725995
+MSE for Zpredict (Lasso) = 1.065447778776207 
+R2 score for Zpredict (Lasso) = -0.028994446137246534
 
 Best lambda (Lasso):0.001
 
@@ -78,46 +78,46 @@ Degree:3 ,sigma(noise) = 0.1
 Ordinary Least Squares:
 
 Features/Betas/Conf.intervals:
- [['1' '1.0784302651295383' '0.0086608626894505']
- ['x0' '-1.0290810834939443' '0.04450161263855694']
- ['x1' '0.8714103221701498' '0.04326425193584908']
- ['x0^2' '-0.7529056499592673' '0.08471648178134167']
- ['x0 x1' '2.29144642337852' '0.0694284361655449']
- ['x1^2' '-5.33214079919881' '0.08648371922975713']
- ['x0^3' '0.5949043930551455' '0.05437205186624353']
- ['x0^2 x1' '0.2991205170886275' '0.04729075029704058']
- ['x0 x1^2' '-1.6559853857955995' '0.04763380060449035']
- ['x1^3' '3.747746672746837' '0.055286613428785894']]
+ [['1' '0.82141175571708' '0.007412145661614249']
+ ['x0' '0.3104131391793274' '0.038116998157880666']
+ ['x1' '1.730540100096435' '0.04292117160887752']
+ ['x0^2' '-2.4188537141929345' '0.08213850283345292']
+ ['x0 x1' '0.3028578449907447' '0.06694256582949396']
+ ['x1^2' '-6.6490914751590005' '0.08519566171306792']
+ ['x0^3' '1.30685060394902' '0.05449976988482046']
+ ['x0^2 x1' '1.0147589176890306' '0.04740337871243717']
+ ['x0 x1^2' '-0.4657433134861099' '0.04494692464545986']
+ ['x1^3' '4.374805101684945' '0.05403037614171953']]
 
-MSE for Zpredict (without resampling): 0.01394969250964039
-R2_score for Zpredict (without resampling): 0.8449628142919079
+MSE for Zpredict (without resampling): 0.014989210585129444
+R2_score for Zpredict (without resampling): 0.8223092070908475
 
 Ordinary Least Squares with 5-fold Cross-Validation:
 
-MSE for Zpredict= 0.01645258681030296 
-R2_score for Zpredict= 0.802228784339053
+MSE for Zpredict= 0.016846638058226098 
+R2_score for Zpredict= 0.7930195729009805
 
 Ridge regression with 5-fold Cross-Validation, sigma(noise) = 0.1:
 
 Lamda:1e-05
 
-MSE for Zpredict (Ridge) = 0.016450804063744013 
-R2 score for Zpredict (Ridge) = 0.8022509094862988
+MSE for Zpredict (Ridge) = 0.01684620004664298 
+R2 score for Zpredict (Ridge) = 0.7930241923219752
 
 Lamda:0.001
 
-MSE for Zpredict (Ridge) = 0.01631299286301461 
-R2 score for Zpredict (Ridge) = 0.8039812754855602
+MSE for Zpredict (Ridge) = 0.016840940689528877 
+R2 score for Zpredict (Ridge) = 0.7930244307920408
 
 Lamda:0.1
 
-MSE for Zpredict (Ridge) = 0.01965027965237525 
-R2 score for Zpredict (Ridge) = 0.7660294332860226
+MSE for Zpredict (Ridge) = 0.02175684157208519 
+R2 score for Zpredict (Ridge) = 0.7322569461322856
 
 Lamda:10
 
-MSE for Zpredict (Ridge) = 0.03312204413353957 
-R2 score for Zpredict (Ridge) = 0.6191279201713332
+MSE for Zpredict (Ridge) = 0.032526230008884896 
+R2 score for Zpredict (Ridge) = 0.599597594965495
 
 Best lambda (Ridge):0.001
 
@@ -126,23 +126,23 @@ Lasso regression with 5-fold Cross-Validation, sigma(noise) = 0.1:
 
 Lamda:1e-05
 
-MSE for Zpredict (Lasso) = 6.483127133689702 
-R2 score for Zpredict (Lasso) = 0.8060654531780769
+MSE for Zpredict (Lasso) = 0.017001603258857065 
+R2 score for Zpredict (Lasso) = 0.7909844912637429
 
 Lamda:0.001
 
-MSE for Zpredict (Lasso) = 6.082209560832189 
-R2 score for Zpredict (Lasso) = 0.743980286476356
+MSE for Zpredict (Lasso) = 0.023989283930515082 
+R2 score for Zpredict (Lasso) = 0.7047552464309134
 
 Lamda:0.1
 
-MSE for Zpredict (Lasso) = 3.652977178982419 
-R2 score for Zpredict (Lasso) = -0.03994640982264177
+MSE for Zpredict (Lasso) = 0.08596459010520932 
+R2 score for Zpredict (Lasso) = -0.05486781377502843
 
 Lamda:10
 
-MSE for Zpredict (Lasso) = 3.652977178982419 
-R2 score for Zpredict (Lasso) = -0.03994640982264177
+MSE for Zpredict (Lasso) = 0.08596459010520932 
+R2 score for Zpredict (Lasso) = -0.05486781377502843
 
 Best lambda (Lasso):1e-05
 
@@ -153,23 +153,23 @@ Ridge regression with 5-fold Cross-Validation, sigma(noise) = 0.01:
 
 Lamda:1e-05
 
-MSE for Zpredict (Ridge) = 0.007668362591841213 
-R2 score for Zpredict (Ridge) = 0.9058788496182484
+MSE for Zpredict (Ridge) = 0.007831519381691321 
+R2 score for Zpredict (Ridge) = 0.889011490275901
 
 Lamda:0.001
 
-MSE for Zpredict (Ridge) = 0.0075634289995797745 
-R2 score for Zpredict (Ridge) = 0.9069680522704189
+MSE for Zpredict (Ridge) = 0.0078166008558823 
+R2 score for Zpredict (Ridge) = 0.8890306549159124
 
 Lamda:0.1
 
-MSE for Zpredict (Ridge) = 0.01191655401582392 
-R2 score for Zpredict (Ridge) = 0.8501507642848338
+MSE for Zpredict (Ridge) = 0.013370612161987285 
+R2 score for Zpredict (Ridge) = 0.8096497429804652
 
 Lamda:10
 
-MSE for Zpredict (Ridge) = 0.026786838398698998 
-R2 score for Zpredict (Ridge) = 0.6746050409864939
+MSE for Zpredict (Ridge) = 0.0242000302552564 
+R2 score for Zpredict (Ridge) = 0.6584164887564752
 
 Best lambda (Ridge):0.001
 
@@ -178,23 +178,23 @@ Lasso regression with 5-fold Cross-Validation, sigma(noise) = 0.01:
 
 Lamda:1e-05
 
-MSE for Zpredict (Lasso) = 6.261452563861799 
-R2 score for Zpredict (Lasso) = 0.9079561247599907
+MSE for Zpredict (Lasso) = 0.0079235037938996 
+R2 score for Zpredict (Lasso) = 0.8873841831971052
 
 Lamda:0.001
 
-MSE for Zpredict (Lasso) = 5.826275697459828 
-R2 score for Zpredict (Lasso) = 0.8184292689669628
+MSE for Zpredict (Lasso) = 0.015860516477459712 
+R2 score for Zpredict (Lasso) = 0.7745800713607506
 
 Lamda:0.1
 
-MSE for Zpredict (Lasso) = 3.3880540153928975 
-R2 score for Zpredict (Lasso) = -0.034212921735726896
+MSE for Zpredict (Lasso) = 0.0752421058625087 
+R2 score for Zpredict (Lasso) = -0.053815459115212995
 
 Lamda:10
 
-MSE for Zpredict (Lasso) = 3.3880540153928975 
-R2 score for Zpredict (Lasso) = -0.034212921735726896
+MSE for Zpredict (Lasso) = 0.0752421058625087 
+R2 score for Zpredict (Lasso) = -0.053815459115212995
 
 Best lambda (Lasso):1e-05
 
@@ -204,78 +204,78 @@ Degree:4 ,sigma(noise) = 1.0
 Ordinary Least Squares:
 
 Features/Betas/Conf.intervals:
- [['1' '-0.6029866942869146' '0.15787084506146534']
- ['x0' '8.570191718656284' '1.0928085116067399']
- ['x1' '10.495876361887321' '1.123084247055561']
- ['x0^2' '-28.14532267901204' '3.1938465684303465']
- ['x0 x1' '-25.295935289717026' '2.962255816776957']
- ['x1^2' '-22.855348366713002' '3.4649121945395644']
- ['x0^3' '40.84677068662008' '4.251995267453895']
- ['x0^2 x1' '21.56060152596889' '3.7202534593873122']
- ['x0 x1^2' '28.58040240945253' '3.7910799310287797']
- ['x1^3' '20.553014662040123' '4.655332524655039']
- ['x0^4' '-22.41505218715778' '2.107350649284687']
- ['x0^3 x1' '2.154463831242503' '2.0366201713346164']
- ['x0^2 x1^2' '-21.204403979502032' '1.9483306256677586']
- ['x0 x1^3' '-5.185670124159036' '2.0012947853377443']
- ['x1^4' '-8.364205870526527' '2.2288384221662314']]
+ [['1' '1.0206512666484964' '0.11075241002756665']
+ ['x0' '8.008066259227329' '0.8507106644480439']
+ ['x1' '-7.526987370755461' '0.9818653450366271']
+ ['x0^2' '-25.338102392824513' '3.1649525468531152']
+ ['x0 x1' '4.321225272539078' '2.4232992588088687']
+ ['x1^2' '21.616191167753353' '3.23979979343601']
+ ['x0^3' '22.588899940373395' '4.574031363292015']
+ ['x0^2 x1' '31.73741661202984' '3.179983599560117']
+ ['x0 x1^2' '-51.818288091090146' '3.414910334953738']
+ ['x1^3' '-17.463467194485755' '4.450509175349669']
+ ['x0^4' '-5.851517854793012' '2.2489755754056646']
+ ['x0^3 x1' '-20.540732373638704' '1.8864426867041406']
+ ['x0^2 x1^2' '3.9266341182707873' '1.8285899065251228']
+ ['x0 x1^3' '34.98219264506057' '1.9198819729425205']
+ ['x1^4' '1.892219014775095' '2.1322095762324618']]
 
-MSE for Zpredict (without resampling): 0.7967804600610066
-R2_score for Zpredict (without resampling): 0.1358831466309124
+MSE for Zpredict (without resampling): 0.8324659293774229
+R2_score for Zpredict (without resampling): 0.21104857189666293
 
 Ordinary Least Squares with 5-fold Cross-Validation:
 
-MSE for Zpredict= 0.920184507514912 
-R2_score for Zpredict= 0.002055165180329932
+MSE for Zpredict= 0.9971162283434861 
+R2_score for Zpredict= 0.03368015777471465
 
 Ridge regression with 5-fold Cross-Validation, sigma(noise) = 1.0:
 
 Lamda:1e-05
 
-MSE for Zpredict (Ridge) = 0.9200587342254961 
-R2 score for Zpredict (Ridge) = 0.002104513824177956
+MSE for Zpredict (Ridge) = 0.9955638097549222 
+R2 score for Zpredict (Ridge) = 0.03521748715265958
 
 Lamda:0.001
 
-MSE for Zpredict (Ridge) = 0.9254217170655596 
-R2 score for Zpredict (Ridge) = -0.005778700518259438
+MSE for Zpredict (Ridge) = 0.9657737145022507 
+R2 score for Zpredict (Ridge) = 0.06546619509887704
 
 Lamda:0.1
 
-MSE for Zpredict (Ridge) = 0.908818150266183 
-R2 score for Zpredict (Ridge) = 0.011932961861531722
+MSE for Zpredict (Ridge) = 0.9694750081406365 
+R2 score for Zpredict (Ridge) = 0.0644433490093929
 
 Lamda:10
 
-MSE for Zpredict (Ridge) = 0.8806072404328662 
-R2 score for Zpredict (Ridge) = 0.03328656483379677
+MSE for Zpredict (Ridge) = 0.969587745923989 
+R2 score for Zpredict (Ridge) = 0.06322966626485405
 
-Best lambda (Ridge):10
+Best lambda (Ridge):0.001
 
 
 Lasso regression with 5-fold Cross-Validation, sigma(noise) = 1.0:
 
 Lamda:1e-05
 
-MSE for Zpredict (Lasso) = 42.4453375013404 
-R2 score for Zpredict (Lasso) = -0.012291414708368031
+MSE for Zpredict (Lasso) = 0.9704341453553035 
+R2 score for Zpredict (Lasso) = 0.0614420077590778
 
 Lamda:0.001
 
-MSE for Zpredict (Lasso) = 41.35772283036273 
-R2 score for Zpredict (Lasso) = 0.016301528938251698
+MSE for Zpredict (Lasso) = 0.9759607153675767 
+R2 score for Zpredict (Lasso) = 0.05829681718512354
 
 Lamda:0.1
 
-MSE for Zpredict (Lasso) = 37.19299023827158 
-R2 score for Zpredict (Lasso) = -0.023404266434725995
+MSE for Zpredict (Lasso) = 1.0508350877003696 
+R2 score for Zpredict (Lasso) = -0.014805020228933397
 
 Lamda:10
 
-MSE for Zpredict (Lasso) = 37.19299023827158 
-R2 score for Zpredict (Lasso) = -0.023404266434725995
+MSE for Zpredict (Lasso) = 1.065447778776207 
+R2 score for Zpredict (Lasso) = -0.028994446137246534
 
-Best lambda (Lasso):0.001
+Best lambda (Lasso):1e-05
 
 
 Degree:4 ,sigma(noise) = 0.1
@@ -283,51 +283,51 @@ Degree:4 ,sigma(noise) = 0.1
 Ordinary Least Squares:
 
 Features/Betas/Conf.intervals:
- [['1' '0.5111303009265349' '0.015787084506146538']
- ['x0' '4.437863095323476' '0.10928085116067401']
- ['x1' '3.6854144390416894' '0.11230842470555613']
- ['x0^2' '-19.598579980142116' '0.3193846568430347']
- ['x0 x1' '-4.5129474365492115' '0.29622558167769575']
- ['x1^2' '-12.82739035114229' '0.3464912194539565']
- ['x0^3' '25.60918748153122' '0.4251995267453896']
- ['x0^2 x1' '10.45937070736186' '0.37202534593873127']
- ['x0 x1^2' '3.256158137944479' '0.37910799310287807']
- ['x1^3' '12.811000298555278' '0.4655332524655039']
- ['x0^4' '-11.24388853563365' '0.21073506492846875']
- ['x0^3 x1' '-5.140733154876006' '0.20366201713346163']
- ['x0^2 x1^2' '-2.073807587213248' '0.19483306256677588']
- ['x0 x1^3' '-1.7841872866353052' '0.20012947853377447']
- ['x1^4' '-3.894191431560841' '0.22288384221662316']]
+ [['1' '0.6601701311539884' '0.011075241002756664']
+ ['x0' '4.776864919305011' '0.08507106644480439']
+ ['x1' '1.881954193106324' '0.09818653450366273']
+ ['x0^2' '-21.207654488455013' '0.31649525468531153']
+ ['x0 x1' '-0.6787524682362018' '0.2423299258808869']
+ ['x1^2' '-8.97678828391711' '0.323979979343601']
+ ['x0^3' '26.844158081188723' '0.4574031363292016']
+ ['x0^2 x1' '10.54738402246451' '0.3179983599560117']
+ ['x0 x1^2' '-5.321342514498181' '0.34149103349537385']
+ ['x1^3' '9.86650553298288' '0.445050917534967']
+ ['x0^4' '-11.116048298489174' '0.22489755754056648']
+ ['x0^3 x1' '-7.5768467486631215' '0.1886442686704141']
+ ['x0^2 x1^2' '1.370973091237262' '0.1828589906525123']
+ ['x0 x1^3' '2.0390516097804823' '0.19198819729425207']
+ ['x1^4' '-3.1694589130447426' '0.21322095762324622']]
 
-MSE for Zpredict (without resampling): 0.010176656985321718
-R2_score for Zpredict (without resampling): 0.8868964131051267
+MSE for Zpredict (without resampling): 0.0109124577231905
+R2_score for Zpredict (without resampling): 0.8706373991873182
 
 Ordinary Least Squares with 5-fold Cross-Validation:
 
-MSE for Zpredict= 0.01214461498983611 
-R2_score for Zpredict= 0.8498747190658046
+MSE for Zpredict= 0.013326717841617958 
+R2_score for Zpredict= 0.8360972354671456
 
 Ridge regression with 5-fold Cross-Validation, sigma(noise) = 0.1:
 
 Lamda:1e-05
 
-MSE for Zpredict (Ridge) = 0.01211139078541626 
-R2 score for Zpredict (Ridge) = 0.8503603869672739
+MSE for Zpredict (Ridge) = 0.013305961145943068 
+R2 score for Zpredict (Ridge) = 0.8363613875106463
 
 Lamda:0.001
 
-MSE for Zpredict (Ridge) = 0.014475029194895173 
-R2 score for Zpredict (Ridge) = 0.8256770083205186
+MSE for Zpredict (Ridge) = 0.015177106433483595 
+R2 score for Zpredict (Ridge) = 0.8133739589410306
 
 Lamda:0.1
 
-MSE for Zpredict (Ridge) = 0.018213725251092126 
-R2 score for Zpredict (Ridge) = 0.7823452888334221
+MSE for Zpredict (Ridge) = 0.01985191636788886 
+R2 score for Zpredict (Ridge) = 0.755675563576918
 
 Lamda:10
 
-MSE for Zpredict (Ridge) = 0.03304862339094952 
-R2 score for Zpredict (Ridge) = 0.6195077135794934
+MSE for Zpredict (Ridge) = 0.03272946458451924 
+R2 score for Zpredict (Ridge) = 0.5969596134988029
 
 Best lambda (Ridge):1e-05
 
@@ -336,23 +336,23 @@ Lasso regression with 5-fold Cross-Validation, sigma(noise) = 0.1:
 
 Lamda:1e-05
 
-MSE for Zpredict (Lasso) = 6.5126376520022875 
-R2 score for Zpredict (Lasso) = 0.8043024479418281
+MSE for Zpredict (Lasso) = 0.016762824703951257 
+R2 score for Zpredict (Lasso) = 0.7939126288348698
 
 Lamda:0.001
 
-MSE for Zpredict (Lasso) = 6.086287555271873 
-R2 score for Zpredict (Lasso) = 0.7612950185722219
+MSE for Zpredict (Lasso) = 0.021245242836317964 
+R2 score for Zpredict (Lasso) = 0.7384383962743395
 
 Lamda:0.1
 
-MSE for Zpredict (Lasso) = 3.652977178982419 
-R2 score for Zpredict (Lasso) = -0.03994640982264177
+MSE for Zpredict (Lasso) = 0.08596459010520932 
+R2 score for Zpredict (Lasso) = -0.05486781377502843
 
 Lamda:10
 
-MSE for Zpredict (Lasso) = 3.652977178982419 
-R2 score for Zpredict (Lasso) = -0.03994640982264177
+MSE for Zpredict (Lasso) = 0.08596459010520932 
+R2 score for Zpredict (Lasso) = -0.05486781377502843
 
 Best lambda (Lasso):1e-05
 
@@ -363,23 +363,23 @@ Ridge regression with 5-fold Cross-Validation, sigma(noise) = 0.01:
 
 Lamda:1e-05
 
-MSE for Zpredict (Ridge) = 0.004001290566859491 
-R2 score for Zpredict (Ridge) = 0.9472086759730509
+MSE for Zpredict (Ridge) = 0.003962979172128169 
+R2 score for Zpredict (Ridge) = 0.9445549700539312
 
 Lamda:0.001
 
-MSE for Zpredict (Ridge) = 0.005953234309664997 
-R2 score for Zpredict (Ridge) = 0.9263441731775923
+MSE for Zpredict (Ridge) = 0.006278325555342745 
+R2 score for Zpredict (Ridge) = 0.9109623312701596
 
 Lamda:0.1
 
-MSE for Zpredict (Ridge) = 0.010021909259206629 
-R2 score for Zpredict (Ridge) = 0.8740277059173736
+MSE for Zpredict (Ridge) = 0.011227704849981828 
+R2 score for Zpredict (Ridge) = 0.8398293281942829
 
 Lamda:10
 
-MSE for Zpredict (Ridge) = 0.026840722483037205 
-R2 score for Zpredict (Ridge) = 0.6731638766436452
+MSE for Zpredict (Ridge) = 0.02442709490594799 
+R2 score for Zpredict (Ridge) = 0.6551374401145102
 
 Best lambda (Ridge):1e-05
 
@@ -388,23 +388,23 @@ Lasso regression with 5-fold Cross-Validation, sigma(noise) = 0.01:
 
 Lamda:1e-05
 
-MSE for Zpredict (Lasso) = 6.2814350865322695 
-R2 score for Zpredict (Lasso) = 0.905373683900679
+MSE for Zpredict (Lasso) = 0.00795385205109003 
+R2 score for Zpredict (Lasso) = 0.8871475786815921
 
 Lamda:0.001
 
-MSE for Zpredict (Lasso) = 5.830651254645441 
-R2 score for Zpredict (Lasso) = 0.8486126717568915
+MSE for Zpredict (Lasso) = 0.01315728585546452 
+R2 score for Zpredict (Lasso) = 0.812444485217177
 
 Lamda:0.1
 
-MSE for Zpredict (Lasso) = 3.3880540153928975 
-R2 score for Zpredict (Lasso) = -0.034212921735726896
+MSE for Zpredict (Lasso) = 0.0752421058625087 
+R2 score for Zpredict (Lasso) = -0.053815459115212995
 
 Lamda:10
 
-MSE for Zpredict (Lasso) = 3.3880540153928975 
-R2 score for Zpredict (Lasso) = -0.034212921735726896
+MSE for Zpredict (Lasso) = 0.0752421058625087 
+R2 score for Zpredict (Lasso) = -0.053815459115212995
 
 Best lambda (Lasso):1e-05
 
@@ -414,84 +414,84 @@ Degree:5 ,sigma(noise) = 1.0
 Ordinary Least Squares:
 
 Features/Betas/Conf.intervals:
- [['1' '0.615981791966135' '0.28126258562777817']
- ['x0' '-2.509086791725606' '2.3942345050332796']
- ['x1' '5.107509123725249' '2.5474498929235114']
- ['x0^2' '-4.815024884409893' '9.506455546558554']
- ['x0 x1' '45.02500227294723' '9.853868096424632']
- ['x1^2' '-40.760373211455054' '10.729833251601224']
- ['x0^3' '31.941708091201324' '20.10998190113102']
- ['x0^2 x1' '-96.31646504715158' '18.797316576030507']
- ['x0 x1^2' '-105.35257399581089' '18.985657127007137']
- ['x1^3' '122.51335611594519' '23.135214922554656']
- ['x0^4' '-47.219133620325785' '21.17133340004725']
- ['x0^3 x1' '110.04539336369443' '18.559167284040804']
- ['x0^2 x1^2' '84.09933663671576' '18.06326807307131']
- ['x0 x1^3' '104.13699526769723' '18.781996520740915']
- ['x1^4' '-149.3295805280114' '23.690106077306638']
- ['x0^5' '20.817029240551868' '8.582945806324183']
- ['x0^4 x1' '-48.451141399291785' '7.83446490603535']
- ['x0^3 x1^2' '-14.038802683598629' '8.208979451509936']
- ['x0^2 x1^3' '-51.45254371335153' '7.912915843088207']
- ['x0 x1^4' '-26.882349577104343' '8.088954946883222']
- ['x1^5' '60.93952097738707' '9.134586992980138']]
+ [['1' '-0.35574386909875133' '0.16241314962382444']
+ ['x0' '20.3660448559277' '1.832923495547047']
+ ['x1' '15.712121531055216' '2.010527524536251']
+ ['x0^2' '-88.32933077293788' '9.724969219468257']
+ ['x0 x1' '-24.843647650109595' '6.889434175089335']
+ ['x1^2' '-114.20596886776308' '9.640074090562976']
+ ['x0^3' '171.82662674767732' '22.64193348113492']
+ ['x0^2 x1' '72.57004914348141' '15.868043839200416']
+ ['x0 x1^2' '27.22962717097791' '16.242559350454712']
+ ['x1^3' '294.7540292712178' '21.302570960251074']
+ ['x0^4' '-175.64085747109038' '24.111046986316428']
+ ['x0^3 x1' '-35.40831635232264' '18.36073193826076']
+ ['x0^2 x1^2' '-5.69379957085417' '14.459201013679992']
+ ['x0 x1^3' '-117.57410813539974' '18.17624260786478']
+ ['x1^4' '-293.1374887038669' '21.816636983185166']
+ ['x0^5' '75.05869076703082' '9.575901723988267']
+ ['x0^4 x1' '-35.36722543085255' '8.04336656160836']
+ ['x0^3 x1^2' '76.38734095634624' '7.507671487642212']
+ ['x0^2 x1^3' '-69.324074521925' '7.974390271116511']
+ ['x0 x1^4' '114.40887872221575' '7.711473787770612']
+ ['x1^5' '94.66077957102404' '8.360688435875606']]
 
-MSE for Zpredict (without resampling): 0.7840885895354872
-R2_score for Zpredict (without resampling): 0.14964761472672894
+MSE for Zpredict (without resampling): 0.775380328499391
+R2_score for Zpredict (without resampling): 0.2651502050656539
 
 Ordinary Least Squares with 5-fold Cross-Validation:
 
-MSE for Zpredict= 0.9602222905811949 
-R2_score for Zpredict= -0.04283086847100712
+MSE for Zpredict= 1.021705330212685 
+R2_score for Zpredict= 0.005515571724574486
 
 Ridge regression with 5-fold Cross-Validation, sigma(noise) = 1.0:
 
 Lamda:1e-05
 
-MSE for Zpredict (Ridge) = 0.9393674000284777 
-R2 score for Zpredict (Ridge) = -0.019026647758441206
+MSE for Zpredict (Ridge) = 0.9991977560970572 
+R2 score for Zpredict (Ridge) = 0.02822182622449494
 
 Lamda:0.001
 
-MSE for Zpredict (Ridge) = 0.9191360604661114 
-R2 score for Zpredict (Ridge) = 0.0017229628928795426
+MSE for Zpredict (Ridge) = 0.9586897577258933 
+R2 score for Zpredict (Ridge) = 0.0707285514315757
 
 Lamda:0.1
 
-MSE for Zpredict (Ridge) = 0.9152674485872401 
-R2 score for Zpredict (Ridge) = 0.004950525239383108
+MSE for Zpredict (Ridge) = 0.964354338132206 
+R2 score for Zpredict (Ridge) = 0.06897450559834133
 
 Lamda:10
 
-MSE for Zpredict (Ridge) = 0.8811655350395379 
-R2 score for Zpredict (Ridge) = 0.03367976282168119
+MSE for Zpredict (Ridge) = 0.9687584527956435 
+R2 score for Zpredict (Ridge) = 0.06388527188819253
 
-Best lambda (Ridge):10
+Best lambda (Ridge):0.001
 
 
 Lasso regression with 5-fold Cross-Validation, sigma(noise) = 1.0:
 
 Lamda:1e-05
 
-MSE for Zpredict (Lasso) = 42.67279009312789 
-R2 score for Zpredict (Lasso) = -0.010751350840085161
+MSE for Zpredict (Lasso) = 0.9569146472482777 
+R2 score for Zpredict (Lasso) = 0.07313182924677353
 
 Lamda:0.001
 
-MSE for Zpredict (Lasso) = 41.40677056085575 
-R2 score for Zpredict (Lasso) = 0.012769251278334837
+MSE for Zpredict (Lasso) = 0.9673449501993583 
+R2 score for Zpredict (Lasso) = 0.06650666355368065
 
 Lamda:0.1
 
-MSE for Zpredict (Lasso) = 37.19299023827158 
-R2 score for Zpredict (Lasso) = -0.023404266434725995
+MSE for Zpredict (Lasso) = 1.0508350877003696 
+R2 score for Zpredict (Lasso) = -0.014805020228933397
 
 Lamda:10
 
-MSE for Zpredict (Lasso) = 37.19299023827158 
-R2 score for Zpredict (Lasso) = -0.023404266434725995
+MSE for Zpredict (Lasso) = 1.065447778776207 
+R2 score for Zpredict (Lasso) = -0.028994446137246534
 
-Best lambda (Lasso):0.001
+Best lambda (Lasso):1e-05
 
 
 Degree:5 ,sigma(noise) = 0.1
@@ -499,57 +499,57 @@ Degree:5 ,sigma(noise) = 0.1
 Ordinary Least Squares:
 
 Features/Betas/Conf.intervals:
- [['1' '0.0412680453086301' '0.02812625856277782']
- ['x0' '9.109722161981406' '0.23942345050332797']
- ['x1' '7.277882964953072' '0.2547449892923512']
- ['x0^2' '-37.37155088650986' '0.9506455546558554']
- ['x0 x1' '-19.21975235535255' '0.9853868096424635']
- ['x1^2' '-24.714948131561986' '1.0729833251601224']
- ['x0^3' '53.19203694930448' '2.0109981901131024']
- ['x0^2 x1' '47.22148083238724' '1.879731657603051']
- ['x0 x1^2' '23.608952638977232' '1.898565712700714']
- ['x1^3' '30.53787170901955' '2.3135214922554663']
- ['x0^4' '-28.3501249016699' '2.1171333400047248']
- ['x0^3 x1' '-49.694388884723196' '1.8559167284040807']
- ['x0^2 x1^2' '-11.901608073712108' '1.8063268073071308']
- ['x0 x1^3' '-27.198579424210692' '1.8781996520740918']
- ['x1^4' '-13.531145008658887' '2.3690106077306643']
- ['x0^5' '3.227534718647372' '0.8582945806324184']
- ['x0^4 x1' '15.676006730930915' '0.7834464906035352']
- ['x0^3 x1^2' '13.016473276693198' '0.8208979451509936']
- ['x0^2 x1^3' '-7.0032406492438195' '0.7912915843088209']
- ['x0 x1^4' '15.548044646592606' '0.8088954946883223']
- ['x1^5' '0.46748502036219414' '0.9134586992980138']]
+ [['1' '0.35768153742454734' '0.016241314962382448']
+ ['x0' '9.191493442845228' '0.18329234955470475']
+ ['x1' '4.923950817107455' '0.2010527524536251']
+ ['x0^2' '-40.444211316872654' '0.9724969219468257']
+ ['x0 x1' '-15.66405757616242' '0.6889434175089335']
+ ['x1^2' '-20.605380904448012' '0.9640074090562978']
+ ['x0^3' '60.25991434056976' '2.264193348113492']
+ ['x0^2 x1' '49.216330378849314' '1.5868043839200416']
+ ['x0 x1^2' '21.162742480861073' '1.6242559350454715']
+ ['x1^3' '26.40066474825954' '2.1302570960251077']
+ ['x0^4' '-36.05719287851791' '2.411104698631643']
+ ['x0^3 x1' '-54.57204999798702' '1.8360731938260764']
+ ['x0^2 x1^2' '-9.5747171095459' '1.4459201013679994']
+ ['x0 x1^3' '-38.01438794471002' '1.8176242607864779']
+ ['x1^4' '-7.667952887177614' '2.1816636983185167']
+ ['x0^5' '6.931259919046753' '0.9575901723988267']
+ ['x0^4 x1' '15.13317195953176' '0.8043366561608362']
+ ['x0^3 x1^2' '17.26418630406209' '0.7507671487642213']
+ ['x0^2 x1^3' '-10.021184756257327' '0.7974390271116512']
+ ['x0 x1^4' '25.655936800830144' '0.7711473787770613']
+ ['x1^5' '-3.50910003939407' '0.8360688435875607']]
 
-MSE for Zpredict (without resampling): 0.009154164186360563
-R2_score for Zpredict (without resampling): 0.8982604202936847
+MSE for Zpredict (without resampling): 0.008509428174433448
+R2_score for Zpredict (without resampling): 0.8991243047169782
 
 Ordinary Least Squares with 5-fold Cross-Validation:
 
-MSE for Zpredict= 0.010788584185368336 
-R2_score for Zpredict= 0.8692541744057187
+MSE for Zpredict= 0.011155543872417302 
+R2_score for Zpredict= 0.8632049863551001
 
 Ridge regression with 5-fold Cross-Validation, sigma(noise) = 0.1:
 
 Lamda:1e-05
 
-MSE for Zpredict (Ridge) = 0.010983980677232844 
-R2 score for Zpredict (Ridge) = 0.8658695183375299
+MSE for Zpredict (Ridge) = 0.011148530994317337 
+R2 score for Zpredict (Ridge) = 0.8630050247893817
 
 Lamda:0.001
 
-MSE for Zpredict (Ridge) = 0.01297054479344546 
-R2 score for Zpredict (Ridge) = 0.8423990246925506
+MSE for Zpredict (Ridge) = 0.013681669458721906 
+R2 score for Zpredict (Ridge) = 0.8317100132214961
 
 Lamda:0.1
 
-MSE for Zpredict (Ridge) = 0.017471288569467378 
-R2 score for Zpredict (Ridge) = 0.79100323683997
+MSE for Zpredict (Ridge) = 0.018924753408573518 
+R2 score for Zpredict (Ridge) = 0.7669972461623721
 
 Lamda:10
 
-MSE for Zpredict (Ridge) = 0.03273675558408011 
-R2 score for Zpredict (Ridge) = 0.6230705342337496
+MSE for Zpredict (Ridge) = 0.032607583441934464 
+R2 score for Zpredict (Ridge) = 0.5983968909469084
 
 Best lambda (Ridge):1e-05
 
@@ -558,23 +558,23 @@ Lasso regression with 5-fold Cross-Validation, sigma(noise) = 0.1:
 
 Lamda:1e-05
 
-MSE for Zpredict (Lasso) = 6.504454752859457 
-R2 score for Zpredict (Lasso) = 0.8134804356970033
+MSE for Zpredict (Lasso) = 0.016128878928130617 
+R2 score for Zpredict (Lasso) = 0.8016663163342737
 
 Lamda:0.001
 
-MSE for Zpredict (Lasso) = 6.0972534175398865 
-R2 score for Zpredict (Lasso) = 0.770139819977106
+MSE for Zpredict (Lasso) = 0.020475516162745306 
+R2 score for Zpredict (Lasso) = 0.7478848128532423
 
 Lamda:0.1
 
-MSE for Zpredict (Lasso) = 3.652977178982419 
-R2 score for Zpredict (Lasso) = -0.03994640982264177
+MSE for Zpredict (Lasso) = 0.08596459010520932 
+R2 score for Zpredict (Lasso) = -0.05486781377502843
 
 Lamda:10
 
-MSE for Zpredict (Lasso) = 3.652977178982419 
-R2 score for Zpredict (Lasso) = -0.03994640982264177
+MSE for Zpredict (Lasso) = 0.08596459010520932 
+R2 score for Zpredict (Lasso) = -0.05486781377502843
 
 Best lambda (Lasso):1e-05
 
@@ -585,23 +585,23 @@ Ridge regression with 5-fold Cross-Validation, sigma(noise) = 0.01:
 
 Lamda:1e-05
 
-MSE for Zpredict (Ridge) = 0.0022393075515661034 
-R2 score for Zpredict (Ridge) = 0.9709907729109609
+MSE for Zpredict (Ridge) = 0.001995706691089539 
+R2 score for Zpredict (Ridge) = 0.9719257618350907
 
 Lamda:0.001
 
-MSE for Zpredict (Ridge) = 0.0047385299048423824 
-R2 score for Zpredict (Ridge) = 0.9403551531285897
+MSE for Zpredict (Ridge) = 0.004702518226338056 
+R2 score for Zpredict (Ridge) = 0.9336258908526396
 
 Lamda:0.1
 
-MSE for Zpredict (Ridge) = 0.009211758337315138 
-R2 score for Zpredict (Ridge) = 0.8847002142963436
+MSE for Zpredict (Ridge) = 0.010299203580409791 
+R2 score for Zpredict (Ridge) = 0.8528158460421722
 
 Lamda:10
 
-MSE for Zpredict (Ridge) = 0.02646837725726158 
-R2 score for Zpredict (Ridge) = 0.6776473980857626
+MSE for Zpredict (Ridge) = 0.024413496264667 
+R2 score for Zpredict (Ridge) = 0.6552949887112755
 
 Best lambda (Ridge):1e-05
 
@@ -610,23 +610,23 @@ Lasso regression with 5-fold Cross-Validation, sigma(noise) = 0.01:
 
 Lamda:1e-05
 
-MSE for Zpredict (Lasso) = 6.268559638429677 
-R2 score for Zpredict (Lasso) = 0.9127333802297241
+MSE for Zpredict (Lasso) = 0.00747816986027759 
+R2 score for Zpredict (Lasso) = 0.8939590428275765
 
 Lamda:0.001
 
-MSE for Zpredict (Lasso) = 5.8531665266071204 
-R2 score for Zpredict (Lasso) = 0.8620549185031852
+MSE for Zpredict (Lasso) = 0.012381982800031218 
+R2 score for Zpredict (Lasso) = 0.8232889551597842
 
 Lamda:0.1
 
-MSE for Zpredict (Lasso) = 3.3880540153928975 
-R2 score for Zpredict (Lasso) = -0.034212921735726896
+MSE for Zpredict (Lasso) = 0.0752421058625087 
+R2 score for Zpredict (Lasso) = -0.053815459115212995
 
 Lamda:10
 
-MSE for Zpredict (Lasso) = 3.3880540153928975 
-R2 score for Zpredict (Lasso) = -0.034212921735726896
+MSE for Zpredict (Lasso) = 0.0752421058625087 
+R2 score for Zpredict (Lasso) = -0.053815459115212995
 
 Best lambda (Lasso):1e-05
 
