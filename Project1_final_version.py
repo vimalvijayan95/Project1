@@ -141,6 +141,7 @@ def model_resample(k, lambdas, X_c, xtrain, ytrain, ztrain, model):
             R2_KFold[l, j] = r2_score(ztest_cv, zpred)
 
             j += 1
+             
         estimated_mse_KFold = np.mean(mse_KFold, axis=1)
         estimated_R2_KFold = np.mean(R2_KFold, axis=1)
         print(
@@ -193,7 +194,7 @@ for d in range(3, 6):
 
             plot(xnew, ynew, zpredict)
             plot(xnew, ynew, ztrue)
-
+            
             print(
                 "\nRidge regression with %s-fold Cross-Validation, sigma(noise) = %s:"
                 % (str(k), str(float(10 ** (-f))))
