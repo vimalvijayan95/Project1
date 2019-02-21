@@ -157,7 +157,7 @@ def model_resample(k, lambdas, X_c, xtrain, ytrain, ztrain, model):
     print("\nBest lambda (%s):%s\n" % (str(model.__name__), str(best_lambda)))
 
 # Make data
-# uniform distribution creation (100 rows,1 column), numbers in [0,1]
+# uniform distribution creation (200 rows,1 column), numbers in [0,1]
 xtrain = np.random.rand(200, 1)
 ytrain = np.random.rand(200, 1)
 X_c = np.c_[xtrain, ytrain]

@@ -88,9 +88,10 @@ for tv in tval:
     slice_Euler_t[i,:] = G_Euler[indte,:]
     i+=1
 
-# b)Plot the slices    
+# b)Plot the slices  
+    
 plt.figure(figsize=(10,10))
-i=0
+i = 0
 #pos=[0.02,0.045,0.075,0.15,0.39,1.]
 pos=[1, 0.39, 0.15, 0.075, 0.045, 0.02]
 #pos=[1, 0.625, 0.35, 0.13, 0.093, 0.065]
@@ -101,33 +102,28 @@ for tv in tval:
     plt.text(x_np[int(Nx/2)],pos[i],'t = %.1f'%tv, fontsize=17)
     i+=1
 
-#plt.text(0.05,0.95,'$\Delta$ x=1/10', bbox=dict(facecolor='white', alpha=0.7))
 plt.legend(['dnn','analytical'],fontsize=26,loc=1)
 plt.xlabel('Position x',fontsize=25)
 plt.ylabel('U(x, $t_0$)',fontsize=25)
-#plt.title("Solutions at $\Delta$ x = 1/10 and num_iter = 10000",fontsize=22)
 plt.show()
 
 plt.figure(figsize=(10,10))
-i=0
-pos=[1, 0.39, 0.15, 0.075, 0.045, 0.02]
+i = 0
+pos = [1, 0.39, 0.15, 0.075, 0.045, 0.02]
 #pos=[1, 0.625, 0.35, 0.13, 0.093, 0.065]
 for tv in tval:
-    #plt.title("Computed solutions at time = %g"%tv,fontsize=20)
     plt.plot(x_npe, slice_Euler_t[i,:],'r', linewidth=3.0)
     plt.plot(x_np, slice_an_t[i,:],'b--')
     plt.text(x_np[int(Nx/2)],pos[i],'t = %.1f'%tv, fontsize=17)
     i+=1
 
-#plt.text(0.05,0.95,'$\Delta$ x=1/10', bbox=dict(facecolor='white', alpha=0.7))
 plt.legend(['Euler','analytical'],fontsize=26,loc=1)
 plt.xlabel('Position x',fontsize=25)
 plt.ylabel('U(x, $t_0$)',fontsize=25)
-#plt.title("Solutions at $\Delta$ x = 1/10 and num_iter = 10000",fontsize=22)
 plt.show()
 
 #-----------------
-# Part A: 3D PLOTS.|
+# Part B: 3D PLOTS.|
 #-----------------
 
 
@@ -200,6 +196,11 @@ from matplotlib import cm
 from matplotlib import pyplot as plt
 from mpl_toolkits.mplot3d import axes3d
 
+#--------------------------------------------
+# NEURAL NETWORK OPTIMIZATION: Learning rate|
+#--------------------------------------------
+
+
 
 maxdiff_sigmoid = np.load('maxdiff_sigmoid.npy')
 maxdiff_tanh = np.load('maxdiff_tanh.npy')
@@ -226,5 +227,65 @@ plt.legend(['sigmoid'],fontsize=26)
 
 plt.show()
 
+
+cost_sigmoid = np.load('cost_sigmoid.npy')
+cost_tanh = np.load('cost_tanh.npy')
+cost_elu = np.load('cost_elu.npy')
+
+learning_rate = np.linspace(1e-4,1e-1,100)
+
+
+plt.rcParams['font.family'] = "Times new roman"
+plt.rcParams['font.size'] = 24
+plt.figure(figsize=(10,10))
+
+plt.plot(learning_rate, cost_sigmoid ,'r', linewidth=2.0 )
+#plt.plot(learning_rate, cost_tanh ,'b', linewidth=2.0 )
+#plt.plot(learning_rate, cost_elu ,'g', linewidth=2.0 )
+plt.xlabel('Learning rate',fontsize=25)
+plt.ylabel('Cost function',fontsize=25)
+#plt.xlim(0,0.03)
+plt.xlim(0,0.1)
+plt.ylim(0,20)
+
+#plt.legend(['sigmoid','tanh','exponential linear'],fontsize=26)
+plt.legend(['sigmoid'],fontsize=26)
+
+
+plt.show()
+
+#%%
+import tensorflow as tf
+import numpy as np
+from matplotlib import cm
+from matplotlib import pyplot as plt
+from mpl_toolkits.mplot3d import axes3d
+
+
+#---------------------------------------
+# EULER METHOD OPTIMIZATION: Timesteps.|
+#---------------------------------------
+
+
+
+
+maxdiff = np.load('maxdiff_100.npy')
+timesteps = np.load('timesteps_100.npy')
+
+plt.rcParams['font.family'] = "Times new roman"
+plt.rcParams['font.size'] = 24
+plt.figure(figsize=(10,10))
+
+plt.plot(timesteps, maxdiff,'g', linewidth=2.0 )
+#plt.plot(learning_rate, maxdiff_tanh ,'b', linewidth=2.0 )
+#plt.plot(learning_rate, maxdiff_elu ,'g', linewidth=2.0 )
+plt.xlabel('1/$\Delta$t',fontsize=25)
+plt.ylabel('Max. difference',fontsize=25)
+#plt.legend(['$\Delta$x=1/10'],fontsize=26)
+plt.legend(['$\Delta$x=1/100'],fontsize=26)
+
+
+
+plt.show()
 
 
